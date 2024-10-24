@@ -4,7 +4,7 @@ from tkinter import *
 def main(page: ft.Page):
 
     def on_register(e):
-        # Ações quando o botão de cadastro for clicado
+        # Ação do botão quando for clicado
         if name_input.value and email_input.value and password_input.value:
             page.dialog = ft.AlertDialog(
                 title=ft.Text("Cadastro realizado!"),
@@ -17,7 +17,7 @@ def main(page: ft.Page):
             page.snack_bar.open = True
             page.update()
 
-    # Elementos do formulário
+    # formulário
     name_input = ft.TextField(label="Nome", width=300)
     email_input = ft.TextField(label="Email", width=300)
     password_input = ft.TextField(label="Senha", password=True, width=300)
@@ -25,7 +25,7 @@ def main(page: ft.Page):
     # Botão de cadastro
     register_button = ft.ElevatedButton(text="Cadastrar", on_click=on_register)
 
-    # Adicionando os elementos ao layout da página
+    # elementos do layout da página
     page.add(
         ft.Container(
             content=ft.Column(
