@@ -1,5 +1,4 @@
 import flet as ft
-from tkinter import *
 
 def main(page: ft.Page):
 
